@@ -1,0 +1,55 @@
+p2p package
+===========
+
+Submodules
+----------
+
+p2p\.gossip module
+------------------------
+
+.. automodule:: p2p.gossip
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+p2p\.synchrony module
+----------------------
+
+.. automodule:: p2p.synchrony
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+p2p\.interfaces\.block module
+-----------------------------
+
+.. automodule:: p2p.interfaces.block
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+p2p\.interfaces\.transaction module
+-----------------------------------
+
+.. automodule:: p2p.interfaces.transaction
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+p2p\.interfaces\.transaction_output module
+------------------------------------------
+
+.. automodule:: p2p.interfaces.transaction_output
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+
+Module contents
+---------------
+
+.. automodule:: blockchain
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,22 @@
+byzantine_agreement package
+===========================
+
+Submodules
+----------
+
+byzantine_agreement\.simple_ba module
+-------------------------------------
+
+.. automodule:: byzantine_agreement.simple_ba
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: blockchain
+    :members:
+    :undoc-members:
+    :show-inheritance:

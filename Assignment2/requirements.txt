@@ -1,0 +1,5 @@
+zodb
+flask
+ecdsa
+matplotlib
+requests

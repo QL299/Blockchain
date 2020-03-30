@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>byzantine_agreement package &mdash; CornellChain 2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="CornellChain 2 documentation" href="index.html"/>
+        <link rel="prev" title="p2p package" href="p2p.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CornellChain
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Welcome to Cornell Chain’s documentation!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">blockchain package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="p2p.html">p2p package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">byzantine_agreement package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-byzantine_agreement.simple_ba">byzantine_agreement.simple_ba module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-blockchain">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CornellChain</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>byzantine_agreement package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/byzantine_agreement.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="byzantine-agreement-package">
+<h1>byzantine_agreement package<a class="headerlink" href="#byzantine-agreement-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-byzantine_agreement.simple_ba">
+<span id="byzantine-agreement-simple-ba-module"></span><h2>byzantine_agreement.simple_ba module<a class="headerlink" href="#module-byzantine_agreement.simple_ba" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA">
+<em class="property">class </em><code class="descclassname">byzantine_agreement.simple_ba.</code><code class="descname">SimplePKIBA</code><span class="sig-paren">(</span><em>sender</em><span class="sig-paren">)</span><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A simple PKI based protocol for Byzantine agreement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sender</strong> (<em>int</em>) – Node ID of sender in peer list.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.s_i">
+<code class="descname">s_i</code><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.s_i" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>list of tuples of str</em> – represents accepted proposals.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.votes">
+<code class="descname">votes</code><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.votes" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>map of str to set of int</em> – represents nodes that broadcasted signatures on a message/proposal.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.signatures">
+<code class="descname">signatures</code><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.signatures" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>map of str to list of (tuple of int, str)</em> – maps string messages/proposals to
+accepted signatures; each signature is a tuple of the node ID that signed and string hex signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.sender">
+<code class="descname">sender</code><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.sender" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em> – node ID acting as the protocol sender (see protocol description in notes)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.curr_round_number">
+<code class="descname">curr_round_number</code><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.curr_round_number" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em> – last round processed internally by the BA protocol</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.broadcast_votes_for">
+<code class="descname">broadcast_votes_for</code><span class="sig-paren">(</span><em>round</em>, <em>votes</em><span class="sig-paren">)</span><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.broadcast_votes_for" title="Permalink to this definition">¶</a></dt>
+<dd><p>Broadcast votes on a proposal to all nodes; this happens once a proposal is added to s_i.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.calculate_votes_for">
+<code class="descname">calculate_votes_for</code><span class="sig-paren">(</span><em>round</em><span class="sig-paren">)</span><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.calculate_votes_for" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate what votes a node should gossip out in the provided round.
+These are proposals that match the criteria given in 4.1, and that a
+node has not previously added to its s_i set and broadcast votes for.
+This function should also update the relevant data structures with the
+current node’s vote.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>round</strong> (<em>int</em>) – Round to target.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Returns a list of proposals to broadcast votes for.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.get_output">
+<code class="descname">get_output</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.get_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the final output of agreement once the protocol has completed, and None before then.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.get_proposals_with_threshold">
+<code class="descname">get_proposals_with_threshold</code><span class="sig-paren">(</span><em>round</em><span class="sig-paren">)</span><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.get_proposals_with_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets proposals that have reached the threshold required by a given round.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>round</strong> (<em>int</em>) – Round to target.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Returns a list of all proposals eligible for adding to a node’s s_i
+(proposals that have achieved required vote thresholds).</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of str</td>
+</tr>
+</tbody>
+</table>
+<p>This function <em>DOES NOT</em> need to check signatures; assume they are already checked in process_vote.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.is_done">
+<code class="descname">is_done</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.is_done" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True once the protocol has completed, and False before.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.process_vote">
+<code class="descname">process_vote</code><span class="sig-paren">(</span><em>vote</em><span class="sig-paren">)</span><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.process_vote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process an incoming vote and add to relevant datastructures.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="byzantine_agreement.simple_ba.SimplePKIBA.run_protocol_loop">
+<code class="descname">run_protocol_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#byzantine_agreement.simple_ba.SimplePKIBA.run_protocol_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the protocol loop; tracks rounds and fires appropriate handler.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blockchain">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-blockchain" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="p2p.html" class="btn btn-neutral" title="p2p package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CS5433 Course Staff, Cornell Tech.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

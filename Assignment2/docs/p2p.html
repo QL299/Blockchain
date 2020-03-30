@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>p2p package &mdash; CornellChain 2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="CornellChain 2 documentation" href="index.html"/>
+        <link rel="next" title="byzantine_agreement package" href="byzantine_agreement.html"/>
+        <link rel="prev" title="blockchain package" href="blockchain.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CornellChain
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Welcome to Cornell Chain’s documentation!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain.html">blockchain package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">p2p package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-p2p.gossip">p2p.gossip module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-p2p.synchrony">p2p.synchrony module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-p2p.interfaces.block">p2p.interfaces.block module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-p2p.interfaces.transaction">p2p.interfaces.transaction module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-p2p.interfaces.transaction_output">p2p.interfaces.transaction_output module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-blockchain">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="byzantine_agreement.html">byzantine_agreement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CornellChain</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>p2p package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/p2p.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="p2p-package">
+<h1>p2p package<a class="headerlink" href="#p2p-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-p2p.gossip">
+<span id="p2p-gossip-module"></span><h2>p2p.gossip module<a class="headerlink" href="#module-p2p.gossip" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="p2p.gossip.gossip_message">
+<code class="descclassname">p2p.gossip.</code><code class="descname">gossip_message</code><span class="sig-paren">(</span><em>type</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#p2p.gossip.gossip_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send message to all known nodes over point-to-pont network (broadcast).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>str</em>) – Type of message to process as; unknown types are ignored.</li>
+<li><strong>message</strong> (<em>str</em>) – Payload to deliver to destination to be processed based on type.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="p2p.gossip.handle_message">
+<code class="descclassname">p2p.gossip.</code><code class="descname">handle_message</code><span class="sig-paren">(</span><em>type</em>, <em>message</em>, <em>sender</em><span class="sig-paren">)</span><a class="headerlink" href="#p2p.gossip.handle_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to handle an incoming message sent by another node (heh-heh-heyyyy!).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>type</strong> (<em>str</em>) – Type of message to process as; unknown types are ignored.</li>
+<li><strong>message</strong> (<em>str</em>) – Payload to deliver to subcomponent based on type.</li>
+<li><strong>sender</strong> (<em>str</em>) – Sender of message (primarily used to find key in PKI).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="p2p.gossip.send_message">
+<code class="descclassname">p2p.gossip.</code><code class="descname">send_message</code><span class="sig-paren">(</span><em>dest</em>, <em>type</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#p2p.gossip.send_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send message to destination node over point-to-point network.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>dest</strong> (<em>str</em>) – IP address of receiver.</li>
+<li><strong>type</strong> (<em>str</em>) – Type of message to process as; unknown types are ignored.</li>
+<li><strong>message</strong> (<em>str</em>) – Payload to deliver to destination to be processed based on type.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-p2p.synchrony">
+<span id="p2p-synchrony-module"></span><h2>p2p.synchrony module<a class="headerlink" href="#module-p2p.synchrony" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="p2p.synchrony.get_curr_round">
+<code class="descclassname">p2p.synchrony.</code><code class="descname">get_curr_round</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#p2p.synchrony.get_curr_round" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current protocol round.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The integer value of the current round.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="p2p.synchrony.is_started">
+<code class="descclassname">p2p.synchrony.</code><code class="descname">is_started</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#p2p.synchrony.is_started" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine whether a round-based protocol requiring our synchrony assumption
+has been initiated.  Returns a bool representing if the protocol has been started.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="p2p.synchrony.log_synchrony">
+<code class="descclassname">p2p.synchrony.</code><code class="descname">log_synchrony</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#p2p.synchrony.log_synchrony" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log protocol execution to stdout.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="p2p.synchrony.receive_start_message">
+<code class="descclassname">p2p.synchrony.</code><code class="descname">receive_start_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#p2p.synchrony.receive_start_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called on receipt of a start message; starts tracking rounds and initializes
+logging to stdout (see log_synchrony).</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="p2p.synchrony.round_length">
+<code class="descclassname">p2p.synchrony.</code><code class="descname">round_length</code><em class="property"> = 6</em><a class="headerlink" href="#p2p.synchrony.round_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>The total length of a round, in seconds.  This is 3x our synchrony assumption
+(as per diagram in HW; you may assume the round length is always set to this)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="p2p.synchrony.should_send">
+<code class="descclassname">p2p.synchrony.</code><code class="descname">should_send</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#p2p.synchrony.should_send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine whether a node should be sending messages when queried.
+See the PDF on where in the round this falls.
+Returns True if a node should send, False otherwise.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="p2p.synchrony.start_time">
+<code class="descclassname">p2p.synchrony.</code><code class="descname">start_time</code><em class="property"> = None</em><a class="headerlink" href="#p2p.synchrony.start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The clock time at which the protocol is started, initialized to None</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="p2p.synchrony.synchrony_assumption">
+<code class="descclassname">p2p.synchrony.</code><code class="descname">synchrony_assumption</code><em class="property"> = 2</em><a class="headerlink" href="#p2p.synchrony.synchrony_assumption" title="Permalink to this definition">¶</a></dt>
+<dd><p>The synchrony assumption (delta in the PDF) to use, in seconds</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-p2p.interfaces.block">
+<span id="p2p-interfaces-block-module"></span><h2>p2p.interfaces.block module<a class="headerlink" href="#module-p2p.interfaces.block" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="p2p.interfaces.block.string_to_block">
+<code class="descclassname">p2p.interfaces.block.</code><code class="descname">string_to_block</code><span class="sig-paren">(</span><em>blockstring</em>, <em>blockclass=&lt;class 'blockchain.pow_block.PoWBlock'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#p2p.interfaces.block.string_to_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a string as input and deserializes it into a
+block object for receipt over network.
+!!! WARNING !!!
+(don’t ever do anything like this in production, it’s not secure).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>blockstring</strong> (<em>str</em>) – String representing the input block.</li>
+<li><strong>blockclass</strong> (<code class="xref py py-obj docutils literal"><span class="pre">Block</span></code>, optional) – Class to use to parse the block.</li>
+<li><strong>is PoW block.</strong> (<em>Default</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Block object of type blockclass, False or exception thrown on failure.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-p2p.interfaces.transaction">
+<span id="p2p-interfaces-transaction-module"></span><h2>p2p.interfaces.transaction module<a class="headerlink" href="#module-p2p.interfaces.transaction" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="p2p.interfaces.transaction.string_to_transaction">
+<code class="descclassname">p2p.interfaces.transaction.</code><code class="descname">string_to_transaction</code><span class="sig-paren">(</span><em>txstring</em><span class="sig-paren">)</span><a class="headerlink" href="#p2p.interfaces.transaction.string_to_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a string as input and deserializes it into a
+transaction object for receipt over network.
+!!! WARNING !!!
+(don’t ever do anything like this in production, it’s not secure).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>txstring</strong> (<em>str</em>) – String representing a cryptocurrency transaction.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Parsed transaction object representing input,
+False or exception thrown on failure.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-obj docutils literal"><span class="pre">Transaction</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-p2p.interfaces.transaction_output">
+<span id="p2p-interfaces-transaction-output-module"></span><h2>p2p.interfaces.transaction_output module<a class="headerlink" href="#module-p2p.interfaces.transaction_output" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="p2p.interfaces.transaction_output.string_to_output">
+<code class="descclassname">p2p.interfaces.transaction_output.</code><code class="descname">string_to_output</code><span class="sig-paren">(</span><em>outputstring</em><span class="sig-paren">)</span><a class="headerlink" href="#p2p.interfaces.transaction_output.string_to_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a string as input and deserializes it into a
+transaction object for receipt over network.
+!!! WARNING !!!
+(don’t ever do anything like this in production, it’s not secure).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>outputstring</strong> (<em>str</em>) – Transaction output represented as a string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Parsed transaction output,
+False or exception thrown on failure.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-obj docutils literal"><span class="pre">TransactionOutput</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-blockchain">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-blockchain" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="byzantine_agreement.html" class="btn btn-neutral float-right" title="byzantine_agreement package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="blockchain.html" class="btn btn-neutral" title="blockchain package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, CS5433 Course Staff, Cornell Tech.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

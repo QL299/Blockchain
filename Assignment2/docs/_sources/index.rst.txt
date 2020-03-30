@@ -1,0 +1,66 @@
+Welcome to Cornell Chain's documentation!
+=========================================
+
+.. toctree::
+   :maxdepth: 3
+
+   self
+   blockchain
+   p2p
+   byzantine_agreement
+
+
+Setting Up
+==========
+
+To install Cornell Chain, simply install Python 3.6 as specified in the homework, and Python "Pip" for Python 3.6.
+YOU MUST BE USING PYTHON 3.6+, or we will not support any language-related errors encountered.  We will be testing
+your code on Python 3.6.
+
+Then, run ``sudo python3 -m pip install -r requirements.txt`` to install all the requirements locally.
+
+
+Running Nodes
+=============
+
+The script ``run_nodes.py`` is provided for running nodes including a block explorer webapp.
+Use it as a standalone for the same webapp as in HW1, or run it with a specific integer node ID
+to spawn a p2p gossip node; use IDs from 1-6 for this HW (eg ``python3 run_nodes.py 6``).
+All nodes will both listen and expose a block explorer on localhost, port 5000 + node id (so
+node 6 is available at http://localhost:5006/).  To test, run a node and make sure the output
+appears as below:
+
+.. figure:: webapp.png
+   :scale: 50 %
+   :alt: The working web interface for Cornell Chain post-setup.
+
+   The working web interface for Cornell Chain post-setup.
+
+
+Database Management
+===================
+
+To clear the database, simply remove all contents of the ``database`` folder and all its subfolders; 
+you may need to do this if the database becomes corrupted or you wish to regenerate it for any reason.
+
+The command to do this on Linux (or Windows 10 bash) is ``rm -rf database/* database/*/*``.  Note that
+the database is structured such that in the root folder, the database for node 0 is stored (root node,
+same as in last assignment).  Subfolders 1-6 in the database folder then store the databases/blockchains
+of nodes 1-6 that can be spawned.
+
+You can also change the database location on disk by editing the ``config.py`` file.
+
+
+Running Tests
+=============
+
+To run a single test, use Python module run format from the root homework directory (e.g. - ``python3.6 -m tests.hash`` to run the hash test).
+To run all tests, run ``python3.6 run_all_tests.py`` in the root homework directory.
+
+
+Additional Documentation and Support
+====================================
+
+Above are links to the full documentation of all the provided blockchain, p2p, and byzantine_agreement modules.
+
+For questions, use the class Slack channel link.
